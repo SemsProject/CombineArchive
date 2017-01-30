@@ -1,0 +1,34 @@
+= CombineArchive !JavaLibrary =
+
+This is a Java library to read/write/create/manipulate/etc. !CombineArchives. To learn more about !CombineArchives visit [http://co.mbine.org/documents/archive co.mbine.org].
+
+
+== Usage ==
+* [http://bin.sems.uni-rostock.de/CombineArchive/ download a binary]
+* include !CombineArchive via Maven: ([http://mvn.sems.uni-rostock.de/releases/de/unirostock/sems/CombineArchive find latest version id], import the [https://sems.uni-rostock.de/2013/10/maven-repository/ SEMS Maven repository])
+{{{
+#!xml
+<dependency>
+    <groupId>de.unirostock.sems</groupId>
+    <artifactId>CombineArchive</artifactId>
+    <version>$VERSION</version>
+</dependency>
+}}}
+* learn HowTo use the library
+* learn about [wiki:MetaDataObject]s
+
+== Build ==
+
+* learn how to BuildCombineArchive
+
+== Dev ==
+* see the sources of this package: source:src/main/java/de/unirostock/sems/cbarchive 
+* see the [http://jdoc.sems.uni-rostock.de/CombineArchive JavaDoc]
+* the library is licences under the 3-clause [source:LICENSE.txt  BSD licence] and therefore ''"allows unlimited redistribution for any purpose as long as its copyright notices and the license's disclaimers of warranty are maintained."'' ([https://en.wikipedia.org/wiki/BSD_licenses#3-clause_license_.28.22Revised_BSD_License.22.2C_.22New_BSD_License.22.2C_or_.22Modified_BSD_License.22.29 from Wikipedia])
+* clone the sources:
+{{{
+#!sh
+git clone git://sems.uni-rostock.de/combinearchive
+}}}
+* find open bugs/issues and requests: {1}
+* file an issue or feature request: [/newticket]

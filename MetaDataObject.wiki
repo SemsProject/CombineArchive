@@ -1,0 +1,31 @@
+== [wiki:MetaDataObject]s in [wiki:CombineArchive]s ==
+[wiki:MetaDataObject]s store meta data about entries in a CombineArchive.
+
+All meta data in a CombineArchive is usually stored in files with names like `/metadata(-.+)?.rdf` in the root of the archive.
+These files contain RDF describing the entries available from the archive.
+Go to [http://co.mbine.org/documents/archive co.mbine.org] to learn more about the meta data used in [wiki:CombineArchive]s.
+
+This library contains an abstract class MetaDataObject ([source:src/main/java/de/unirostock/sems/cbarchive/meta/MetaDataObject.java  source], [http://jdoc.sems.uni-rostock.de/CombineArchive/de/unirostock/sems/cbarchive/meta/MetaDataObject.html JavaDoc]) which represents instances of RDF description blocks, such as:
+
+{{{
+#!xml
+<rdf:Description rdf:about="/some/file">
+	<!-- some describing subtree -->
+</rdf:Description>
+}}}
+
+There are two main subclasses extending the MetaDataObject:
+* The [http://jdoc.sems.uni-rostock.de/CombineArchive/de/unirostock/sems/cbarchive/meta/DefaultMetaDataObject.html DefaultMetaDataObject] is used to represent any kind of meta data that is not further known to the library
+* The [http://jdoc.sems.uni-rostock.de/CombineArchive/de/unirostock/sems/cbarchive/meta/OmexMetaDataObject.html OmexMetaDataObject] represents meta data supposed to be the default meta format for [wiki:CombineArchive]s.
+
+However, your able to retrieve the plain XML subtree in any case using the `getXmlDescription()` ([http://jdoc.sems.uni-rostock.de/CombineArchive/de/unirostock/sems/cbarchive/meta/MetaDataObject.html#getXmlDescription%28%29 JavaDoc]) method. This function will return the `rdf:Description` element, so you can try to parse the subtree on your own.
+
+=== Write your own MetaDataObject ===
+If you're developing a different kind of format to describe your files we'd like to encourage you to write your own subclass of the MetaDataObject. Just extend the class (see [source:src/main/java/de/unirostock/sems/cbarchive/meta/MetaDataObject.java  source]) and add a function `tryToRead (Element element, ArchiveEntry about, String fragmentIdentifier)` that takes the `rdf:Description` element, the [https://sems.uni-rostock.de/trac/combinearchive/browser/src/main/java/de/unirostock/sems/cbarchive/ArchiveEntry.java ArchiveEntry] that is being described and an optional fragment identifier (which might be null). To get an idea you may want to have a look at the sources of [source:src/main/java/de/unirostock/sems/cbarchive/meta/DefaultMetaDataObject.java  DefaultMetaDataObject] and [source:src/main/java/de/unirostock/sems/cbarchive/meta/OmexMetaDataObject.java  OmexMetaDataObject].
+
+Afterwards add a small snippet to the [source:src/main/java/de/unirostock/sems/cbarchive/meta/MetaDataFile.java@be56ff2#L139 MetaDataFile reader] to try to parse meta data given your format.
+
+If you finished implementing support for your meta data format please send your code to one of us. We'll be happy to support your format officially, so others may also benefit from the data that is stored in your descriptions.
+
+
+Also, feel free to fork this project on [https://github.com/binfalse/CombineArchive GitHub] :)
