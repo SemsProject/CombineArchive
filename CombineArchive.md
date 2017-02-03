@@ -1,1 +1,1 @@
-See [None](//WikiStart).
+See [index](index).
