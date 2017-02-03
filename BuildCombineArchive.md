@@ -37,6 +37,7 @@ Build with Ant
 ---------------
 
 [Ant](https://ant.apache.org/) is an Apache tool for automating software build processes. There is a [source:build.xml build.xml] file included in the source code that tells ant what to do. Since ant is not able to resolve the dependencies you need to create a directory `lib` containing the following libraries:
+
 * [BFLog](http://bin.sems.uni-rostock.de/BFLog/)
 * [json-simple](https://code.google.com/p/json-simple/)
 * [JDOM2](http://jdom.org/)

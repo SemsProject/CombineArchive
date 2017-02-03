@@ -1,7 +1,7 @@
 CombineArchive JavaLibrary 
 =============================
 
-This is a Java library to read/write/create/manipulate/etc. !CombineArchives. To learn more about !CombineArchives visit [http://co.mbine.org/documents/archive co.mbine.org].
+This is a Java library to read/write/create/manipulate/etc. CombineArchives. To learn more about !CombineArchives visit [co.mbine.org](http://co.mbine.org/documents/archive co.mbine.org).
 
 Usage 
 ------

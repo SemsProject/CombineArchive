@@ -194,7 +194,7 @@ You can of course also delete some meta data for an entry in the archive. Just p
 entry.removeDescription (someMetaData);
 ```
 
-Read more about [MetaDataObjects](/MetaDataObject).
+Read more about [MetaDataObjects](MetaDataObject).
 
 Finalising the CombineArchive
 -----------------------------
