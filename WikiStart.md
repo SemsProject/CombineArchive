@@ -31,5 +31,5 @@ Dev
 * see the sources of this package: /src/main/java/de/unirostock/sems/cbarchive 
 * see the [JavaDoc](http://jdoc.sems.uni-rostock.de/CombineArchive)
 * the library is licences under the 3-clause [BSD licence](/LICENSE.txt) and therefore *"allows unlimited redistribution for any purpose as long as its copyright notices and the license's disclaimers of warranty are maintained."* ([from Wikipedia](https://en.wikipedia.org/wiki/B/S/D_licenses#3-clause_license_.28.22Revised_B/S/D_License.22.2C_.22New_B/S/D_License.22.2C_or_.22Modified_B/S/D_License.22.29))
-* clone the sources: `git clone git://sems.uni-rostock.de/combinearchive`
+* clone the sources: `git clone git@github.com:SemsProject/CombineArchive.git`
 * find open bugs/issues and requests in the [Issue Tracker](https://github.com/SemsProject/CombineArchive/issues)

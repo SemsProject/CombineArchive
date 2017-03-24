@@ -4,7 +4,7 @@ Build CombineArchive
 When you've cloned the source code:
 
 ```sh
-git clone git://sems.uni-rostock.de/combinearchive
+git clone git@github.com:SemsProject/CombineArchive.git
 ```
 
 There are two supported options to build this project:
