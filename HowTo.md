@@ -127,7 +127,7 @@ After doing so you'll find the CellML file in `/target/dir/file.cellml` of the C
 
 #### Providing a Base Path 
 
-The function `addEntry(File baseDir, File file, URI format)` ([http://jdoc.sems.uni-rostock.de/CombineArchive/de/unirostock/sems/cbarchive/CombineArchive.html#addEntry(java.io.File,%20java.io.File,%20java.net.URI) JavaDoc]) will add an entry stored in `file` from the subtree starting in `baseDir`. For example:
+The function `addEntry(File baseDir, File file, URI format)` ([JavaDoc](http://jdoc.sems.uni-rostock.de/CombineArchive/de/unirostock/sems/cbarchive/CombineArchive.html#addEntry(java.io.File,%20java.io.File,%20java.net.URI)) will add an entry stored in `file` from the subtree starting in `baseDir`. For example:
 
 ```java
 ArchiveEntry SBMLFile = ca.addEntry (
@@ -140,7 +140,7 @@ will add an SBML file which is located in `/tmp/base/path/sub/dir/file.sbml`. Th
 
 While this method seems to be more complicated and less useful, there are cases when it eases your work. Imagine you want to create an archive of all files in `/home/user/latest/research` recursively. Using this method you could simply iterate through all files and directories always passing `/home/user/latest/research` as base path to the creation of entries. This way, you can quickly zip subtree on your file system.
 
-(To learn more about formats see combine-ext:wiki, especially http://sems.uni-rostock.de/trac/combine-ext/wiki/CombineFormatizer)
+(To learn more about formats see [Combine-Ext](http://sems.uni-rostock.de/trac/combine-ext/wiki), especially [CombineFormatizer](http://sems.uni-rostock.de/trac/combine-ext/wiki/CombineFormatizer))
 
 ### Setting the Main Entry 
 
@@ -206,7 +206,9 @@ ca.pack ();
 ca.close ();
 ```
 
-* `pack ()` ([http://jdoc.sems.uni-rostock.de/CombineArchive/de/unirostock/sems/cbarchive/CombineArchive.html#pack%28%29 JavaDoc]) will generate the manifest of the archive an write the meta data file. Thus, you do not need to call it if you did not modify the archive. By default, this method will write the meta data of all files into a single meta-data-file in the archive. There is, however, also demand for a functionality to generate multiple meta data files, one for every file in the archive. Thus, you may use the function `pack (boolean multipleMetaFiles)` ([http://jdoc.sems.uni-rostock.de/CombineArchive/de/unirostock/sems/cbarchive/CombineArchive.html#pack%28boolean%29 JavaDoc]). Passing `true` to the call we will generate multiple meta data files.
+* `pack ()` ([JavaDoc](http://jdoc.sems.uni-rostock.de/CombineArchive/de/unirostock/sems/cbarchive/CombineArchive.html#pack%28%29)) will generate the manifest of the archive an write the meta data file.
+  Thus, you do not need to call it if you did not modify the archive. By default, this method will write the meta data of all files into a single meta-data-file in the archive.
+  There is, however, also demand for a functionality to generate multiple meta data files, one for every file in the archive. Thus, you may use the function `pack (boolean multipleMetaFiles)` ([JavaDoc](http://jdoc.sems.uni-rostock.de/CombineArchive/de/unirostock/sems/cbarchive/CombineArchive.html#pack%28boolean%29)). Passing `true` to the call we will generate multiple meta data files.
 * `close ()` ([JavaDoc](http://jdoc.sems.uni-rostock.de/CombineArchive/de/unirostock/sems/cbarchive/CombineArchive.html#close%28%29)) then closes the CombineArchive and writes it to the disk.
 
 Full Example 
