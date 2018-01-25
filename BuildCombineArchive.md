@@ -4,7 +4,7 @@ Build CombineArchive
 When you've cloned the source code:
 
 ```sh
-git clone git@github.com:SemsProject/CombineArchive.git
+git clone https://github.com/SemsProject/CombineArchive
 ```
 
 There are two supported options to build this project:
@@ -36,7 +36,7 @@ That done, you'll find the binaries in the `target` directory.
 Build with Ant 
 ---------------
 
-[Ant](https://ant.apache.org/) is an Apache tool for automating software build processes. There is a [source:build.xml build.xml] file included in the source code that tells ant what to do. Since ant is not able to resolve the dependencies you need to create a directory `lib` containing the following libraries:
+[Ant](https://ant.apache.org/) is an Apache tool for automating software build processes. There is a [build.xml](https://github.com/SemsProject/CombineArchive/blob/master/build.xml) file included in the source code that tells ant what to do. Since ant is not able to resolve the dependencies you need to create a directory `lib` containing the following libraries:
 
 * [BFLog](http://bin.sems.uni-rostock.de/BFLog/)
 * [json-simple](https://code.google.com/p/json-simple/)

@@ -7,15 +7,17 @@ Usage
 ------
 
 * [download a binary](http://bin.sems.uni-rostock.de/CombineArchive/)
-* include !CombineArchive via Maven: ([find latest version id](http://mvn.sems.uni-rostock.de/releases/de/unirostock/sems/CombineArchive), import the [SEMS Maven repository](https://sems.uni-rostock.de/2013/10/maven-repository/))
+* include CombineArchive via Maven:
 
 ```xml
 <dependency>
-    <groupId>de.unirostock.sems</groupId>
+    <groupId>de.uni-rostock.sbi</groupId>
     <artifactId>CombineArchive</artifactId>
     <version>$VERSION</version>
 </dependency>
 ```
+([see all versions at Maven Central](https://search.maven.org/#search%7Cgav%7C1%7Cg%3A%22de.uni-rostock.sbi%22%20AND%20a%3A%22CombineArchive%22))
+
 
 * learn [HowTo](HowTo) use the library
 * learn about [MetaDataObjects](MetaDataObject)
